@@ -1,0 +1,8 @@
+Total: 30
+
+day 1 (21-07-2026) 30 mins
+1.idea finalization: AI-Recruitment-Assistant
+2.project structure  
+3.github setup 
+4.fastapi setup
+5.streamlit setup 
