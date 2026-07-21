@@ -1,0 +1,87 @@
+AI-Recruitment-Assistant/
+│
+├── .github/
+│   └── workflows/
+│       └── ci.yml
+│
+├── app/
+│   ├── api/
+│   │   ├── routes/
+│   │   │   ├── resume.py
+│   │   │   ├── jd.py
+│   │   │   ├── interview.py
+│   │   │   └── speech.py
+│   │   │
+│   │   └── main.py
+│   │
+│   ├── core/
+│   │   ├── config.py
+│   │   ├── logger.py
+│   │   └── constants.py
+│   │
+│   ├── models/
+│   │   ├── summarizer.py
+│   │   ├── resume_matcher.py
+│   │   ├── question_generator.py
+│   │   ├── evaluator.py
+│   │   └── speech_to_text.py
+│   │
+│   ├── services/
+│   │   ├── resume_service.py
+│   │   ├── jd_service.py
+│   │   ├── interview_service.py
+│   │   └── report_service.py
+│   │
+│   ├── database/
+│   │   ├── database.py
+│   │   └── schema.py
+│   │
+│   ├── utils/
+│   │   ├── pdf_parser.py
+│   │   ├── text_cleaner.py
+│   │   ├── similarity.py
+│   │   └── metrics.py
+│   │
+│   └── ui/
+│       ├── Home.py
+│       ├── Resume.py
+│       ├── Interview.py
+│       └── Dashboard.py
+│
+├── models/
+│   ├── flan_t5/
+│   ├── whisper/
+│   └── embeddings/
+│
+├── datasets/
+│   ├── raw/
+│   ├── processed/
+│   └── training/
+│
+├── notebooks/
+│   ├── EDA.ipynb
+│   ├── FineTuning.ipynb
+│   └── Experiments.ipynb
+│
+├── scripts/
+│   ├── download_models.py
+│   ├── preprocess.py
+│   └── train.py
+│
+├── tests/
+│   ├── test_resume.py
+│   ├── test_summarizer.py
+│   └── test_api.py
+│
+├── docs/
+│   ├── architecture.png
+│   ├── workflow.png
+│   └── screenshots/
+│
+├── requirements.txt
+├── README.md
+├── .env.example
+├── .gitignore
+├── docker-compose.yml
+├── Dockerfile
+└── LICENSE
