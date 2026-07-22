@@ -6,3 +6,7 @@ day 1 (21-07-2026) 30 mins
 3.github setup 
 4.fastapi setup
 5.streamlit setup 
+
+day 2: (22-07-2026)
+1.Implemented resume upload and PDF parsing
+2.
