@@ -1,22 +1,30 @@
 from transformers import pipeline
 
 
-class ResumeSummarizer:
+class TextSummarizer:
+
     def __init__(self):
-        self.summarizer = pipeline(
-            task="text2text-generation",
+        self.pipeline = pipeline(
+            "text2text-generation",
             model="google/flan-t5-small"
         )
 
-    def summarize(self, text: str) -> str:
-        prompt = (
-            "Summarize the following resume professionally. "
-            "Highlight the candidate's experience, skills, education, "
-            "and key achievements.\n\n"
-            f"{text}"
-        )
+    def summarize(self, text: str, document_type: str):
 
-        result = self.summarizer(
+        prompts = {
+            "resume": (
+                "Summarize the following resume. "
+                "Focus on candidate skills, experience, education, projects, and achievements.\n\n"
+            ),
+            "job_description": (
+                "Summarize the following job description. "
+                "Focus on required skills, responsibilities, qualifications, and experience.\n\n"
+            )
+        }
+
+        prompt = prompts[document_type] + text
+
+        result = self.pipeline(
             prompt,
             max_new_tokens=150,
             do_sample=False

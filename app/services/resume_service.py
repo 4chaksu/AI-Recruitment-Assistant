@@ -1,7 +1,7 @@
-from app.models.summarizer import ResumeSummarizer
+from app.models.summarizer import TextSummarizer
 from app.utils.pdf_parser import PDFParser
 
-summarizer = ResumeSummarizer()
+summarizer = TextSummarizer()
 
 
 class ResumeService:
@@ -12,7 +12,7 @@ class ResumeService:
         resume_text = PDFParser.extract_text(file_path)
 
         # Temporary limit because FLAN-T5 has a limited context window
-        summary = summarizer.summarize(resume_text[:2000])
+        summary = summarizer.summarize(resume_text[:2000],document_type="resume")
 
         return {
             "resume_text": resume_text,

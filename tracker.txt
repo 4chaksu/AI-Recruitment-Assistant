@@ -7,6 +7,10 @@ day 1 (21-07-2026) 30 mins
 4.fastapi setup
 5.streamlit setup 
 
-day 2: (22-07-2026)
+day 2: (22-07-2026) 30 mins
 1.Implemented resume upload and PDF parsing
-2.
+2.Implement resume summarization using FLAN-T5 (slow inference) 
+
+day 3: (03-07-2026) 30 mins 
+1.Implemented JD parser with api and ui 
+2.updated summarizer for both resume and JD 
