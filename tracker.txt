@@ -1,4 +1,4 @@
-Total: 30
+Total: 95 mins
 
 day 1 (21-07-2026) 30 mins
 1.idea finalization: AI-Recruitment-Assistant
@@ -11,6 +11,11 @@ day 2: (22-07-2026) 30 mins
 1.Implemented resume upload and PDF parsing
 2.Implement resume summarization using FLAN-T5 (slow inference) 
 
-day 3: (03-07-2026) 30 mins 
+day 3: (03-07-2026) 35 mins 
 1.Implemented JD parser with api and ui 
-2.updated summarizer for both resume and JD 
+2.updated summarizer for both resume and JD  
+
+day 4 (04-08-2026) 60 mins 
+1.implemented matching logic
+2.interview question generation part 
+3.speech to text (getting error due ffmpeg -version that I have fixed) code needed to change

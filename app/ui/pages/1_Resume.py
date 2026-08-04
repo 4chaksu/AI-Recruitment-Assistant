@@ -18,7 +18,8 @@ if uploaded_file is not None:
         )
     }
 
-    with st.spinner("Analyzing resume..."):
+    with st.spinner("Analyzing Resume..."):
+
         response = requests.post(
             "http://127.0.0.1:8000/resume/upload",
             files=files
@@ -28,19 +29,21 @@ if uploaded_file is not None:
 
         data = response.json()
 
+        # Save in Session
+        st.session_state["resume_text"] = data["resume_text"]
+        st.session_state["resume_summary"] = data["summary"]
+
         st.success("Resume uploaded successfully!")
 
-        # ===== Resume Summary =====
         st.subheader("📝 Resume Summary")
         st.write(data["summary"])
 
-        # ===== Resume Text =====
-        with st.expander("📄 Extracted Resume Text"):
+        with st.expander("📄 Extracted Resume"):
             st.text_area(
-                "Resume Content",
+                "",
                 data["resume_text"],
-                height=400
+                height=350
             )
 
     else:
-        st.error("Upload failed")
+        st.error("Upload Failed")

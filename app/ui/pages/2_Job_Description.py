@@ -29,19 +29,21 @@ if uploaded_file is not None:
 
         data = response.json()
 
+        # Save in Session
+        st.session_state["jd_text"] = data["jd_text"]
+        st.session_state["jd_summary"] = data["summary"]
+
         st.success("Job Description uploaded successfully!")
 
-        # ===== JD Summary =====
-        st.subheader("📝 Job Description Summary")
+        st.subheader("📝 JD Summary")
         st.write(data["summary"])
 
-        # ===== Original JD =====
-        with st.expander("📄 Original Job Description"):
+        with st.expander("📄 Original JD"):
             st.text_area(
-                "Job Description",
+                "",
                 data["jd_text"],
-                height=400
+                height=350
             )
 
     else:
-        st.error("Failed to upload Job Description.")
+        st.error("Upload Failed")
